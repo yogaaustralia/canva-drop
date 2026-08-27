@@ -1,5 +1,11 @@
 # Carousel playbook
 
+> **Under revision, 25 August 2026.** Step 6 below is wrong and is being replaced.
+> It ends by handing over a block of text to paste into Canva by hand, which is the
+> manual work this pipeline exists to remove. The correct ending is the session
+> building the design and landing it in Canva already populated and editable, as
+> `README.md` and `how-it-works.html` describe. Steps 1 to 5 stand.
+
 Instructions for a Claude session helping a Yoga Australia staff member turn a published article into a social carousel. The staff member supplies the article and makes the calls. You mine it, draft the words, and hand over a build sheet she pastes into Canva. Canva does the visual finish, so you never produce images or mock-ups.
 
 This repo is public. Everything in it, and everything pushed to it, is on the open internet. Member data, unpublished drafts, and font files stay out.

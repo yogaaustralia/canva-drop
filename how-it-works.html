@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en-AU"><head><meta charset="utf-8">
+<title>Article to carousel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap">
+<style>
+  :root{
+    --plum:#735766; --deepplum:#6C4B60; --soft:#D7CCD2; --mist:#E3DDE1;
+    --gdk:#5C735B; --glt:#DAE8D9; --bdk:#446074; --blt:#D8E4E8;
+    --ink:#1A1A1A; --paper:#FFFFFF; --rule:#D7CCD2; --bad:#8C2F2F;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);
+       font-family:"Work Sans","Segoe UI",system-ui,sans-serif;}
+  .sheet{max-width:1420px;margin:0 auto;padding:54px 50px 80px;}
+  h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:48px;
+     letter-spacing:-.4px;margin:0 0 8px;color:var(--deepplum);}
+  .src{font-size:14.5px;color:var(--plum);letter-spacing:.05em;text-transform:uppercase;margin:0 0 38px;}
+  h2{font-family:Georgia,serif;font-weight:400;font-size:30px;margin:58px 0 20px;color:var(--deepplum);}
+  svg{display:block;width:100%;height:auto;}
+  .legend{display:flex;gap:32px;flex-wrap:wrap;font-size:14.5px;color:var(--plum);margin:18px 0 0;}
+  .legend span{display:flex;align-items:center;gap:9px;}
+  .sw{width:17px;height:17px;display:inline-block;border:1px solid rgba(0,0,0,.15);}
+  .sw.split{background:linear-gradient(90deg,#735766 0 50%,#446074 50% 100%);}
+
+  .mockrow{display:grid;grid-template-columns:400px 1fr;gap:52px;align-items:start;}
+  .mock{border:1px solid var(--rule);}
+  .mockhead{font-size:13px;letter-spacing:.13em;text-transform:uppercase;
+            padding:11px 16px;color:#fff;background:var(--deepplum);}
+  .mockbody{padding:26px;}
+
+  .tile{display:grid;grid-template-columns:1fr 118px;border:1px solid var(--rule);
+        background:var(--mist);width:100%;aspect-ratio:4/5;}
+  .tile .words{padding:24px 20px;display:flex;flex-direction:column;}
+  .tile .chip{align-self:flex-start;font-size:10px;letter-spacing:.12em;background:#fff;
+              color:var(--deepplum);padding:5px 9px;border:1px solid var(--rule);}
+  .tile .disp{font-family:Georgia,serif;font-size:23px;line-height:1.24;color:var(--deepplum);margin:30px 0 0;}
+  .tile .photo{background:var(--plum);display:flex;align-items:center;justify-content:center;}
+  .tile .photo em{font-style:normal;font-size:10px;letter-spacing:.14em;color:#fff;
+                  text-transform:uppercase;transform:rotate(-90deg);white-space:nowrap;}
+  .tile .mark{margin-top:auto;font-family:Georgia,serif;font-size:14px;color:var(--plum);}
+
+  .ready{list-style:none;margin:0;padding:0;}
+  .ready li{font-size:17px;line-height:1.5;color:var(--deepplum);padding:13px 0 13px 30px;
+            border-bottom:1px solid var(--rule);position:relative;}
+  .ready li:last-child{border-bottom:none;}
+  .ready li::before{content:"";position:absolute;left:2px;top:21px;width:13px;height:13px;
+                    background:var(--glt);border:1px solid var(--gdk);}
+  .ready li b{font-weight:600;}
+  .ready li span{display:block;font-size:14.5px;color:var(--plum);margin-top:4px;}
+</style></head>
+<body><div class="sheet">
+
+<h1>Article to carousel</h1>
+<p class="src">Yoga Australia &middot; turning a published article into a social carousel &middot; 25 August 2026</p>
+
+<svg viewBox="0 0 1320 440" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="How a published article becomes a finished editable Canva design in five steps">
+  <defs>
+    <marker id="arp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#735766"/></marker>
+  </defs>
+
+  <text x="0" y="18" font-size="15" letter-spacing="2.4" fill="#6C4B60">STEP BY STEP</text>
+  <line x1="0" y1="32" x2="1320" y2="32" stroke="#D7CCD2"/>
+
+  <rect x="0" y="60" width="244" height="266" fill="#FFFFFF" stroke="#6C4B60" stroke-width="1.5"/>
+  <rect x="0" y="60" width="244" height="32" fill="#735766"/>
+  <text x="14" y="82" font-size="14" letter-spacing="1.2" fill="#FFFFFF">1  START IT</text>
+  <text x="14" y="126" font-size="16" fill="#6C4B60">Open claude.ai</text>
+  <text x="14" y="154" font-size="16" fill="#6C4B60">Paste the article link</text>
+  <text x="14" y="182" font-size="16" fill="#6C4B60">Name the repo</text>
+  <text x="14" y="208" font-size="14" fill="#446074">yogaaustralia/canva-drop</text>
+  <text x="14" y="250" font-size="14.5" fill="#735766">The playbook is in there,</text>
+  <text x="14" y="272" font-size="14.5" fill="#735766">so the session already</text>
+  <text x="14" y="294" font-size="14.5" fill="#735766">knows the steps</text>
+
+  <rect x="269" y="60" width="244" height="266" fill="#FFFFFF" stroke="#446074" stroke-width="1.5"/>
+  <rect x="269" y="60" width="244" height="32" fill="#446074"/>
+  <text x="283" y="82" font-size="14" letter-spacing="1.2" fill="#FFFFFF">2  HOOK MINE</text>
+  <text x="283" y="126" font-size="16" fill="#24313A">Reads the whole article</text>
+  <text x="283" y="154" font-size="16" fill="#24313A">Pulls eight to ten lines</text>
+  <text x="283" y="178" font-size="16" fill="#24313A">that stand on their own</text>
+  <text x="283" y="214" font-size="16" fill="#24313A">Ranks them for you</text>
+  <text x="283" y="256" font-size="14.5" fill="#5C735B">Every line shows the</text>
+  <text x="283" y="278" font-size="14.5" fill="#5C735B">paragraph it came from</text>
+
+  <rect x="538" y="60" width="244" height="266" fill="#FFFFFF" stroke="#6C4B60" stroke-width="1.5"/>
+  <rect x="538" y="60" width="122" height="32" fill="#735766"/>
+  <rect x="660" y="60" width="122" height="32" fill="#446074"/>
+  <text x="552" y="82" font-size="14" letter-spacing="1.2" fill="#FFFFFF">3  DECIDE TOGETHER</text>
+  <text x="552" y="126" font-size="16" fill="#6C4B60">Which lines to use</text>
+  <text x="552" y="154" font-size="16" fill="#6C4B60">How many slides</text>
+  <text x="552" y="182" font-size="16" fill="#6C4B60">Which template</text>
+  <text x="552" y="210" font-size="16" fill="#6C4B60">Which photographs</text>
+  <text x="552" y="254" font-size="14.5" fill="#735766">It recommends every</text>
+  <text x="552" y="276" font-size="14.5" fill="#735766">time, you decide</text>
+  <text x="552" y="298" font-size="14.5" fill="#735766">every time</text>
+
+  <rect x="807" y="60" width="244" height="266" fill="#FFFFFF" stroke="#446074" stroke-width="1.5"/>
+  <rect x="807" y="60" width="244" height="32" fill="#446074"/>
+  <text x="821" y="82" font-size="14" letter-spacing="1.2" fill="#FFFFFF">4  BUILD IT</text>
+  <text x="821" y="126" font-size="16" fill="#24313A">Writes every slide</text>
+  <text x="821" y="154" font-size="16" fill="#24313A">Crops the photographs</text>
+  <text x="821" y="182" font-size="16" fill="#24313A">Writes the caption</text>
+  <text x="821" y="210" font-size="16" fill="#24313A">Checks the lot</text>
+  <text x="821" y="252" font-size="14.5" fill="#5C735B">Then fills the template</text>
+  <text x="821" y="274" font-size="14.5" fill="#5C735B">and puts the finished</text>
+  <text x="821" y="296" font-size="14.5" fill="#5C735B">design into Canva</text>
+
+  <rect x="1076" y="60" width="244" height="266" fill="#FFFFFF" stroke="#6C4B60" stroke-width="1.5"/>
+  <rect x="1076" y="60" width="244" height="32" fill="#735766"/>
+  <text x="1090" y="82" font-size="14" letter-spacing="1.2" fill="#FFFFFF">5  MAKE IT YOURS</text>
+  <text x="1090" y="126" font-size="16" fill="#6C4B60">Open the design</text>
+  <text x="1090" y="154" font-size="16" fill="#6C4B60">Words and pictures</text>
+  <text x="1090" y="178" font-size="16" fill="#6C4B60">are already in place</text>
+  <text x="1090" y="214" font-size="16" fill="#6C4B60">Change what you like</text>
+  <text x="1090" y="256" font-size="14.5" fill="#735766">Nothing is locked and</text>
+  <text x="1090" y="278" font-size="14.5" fill="#735766">nothing is flattened</text>
+
+  <line x1="248" y1="193" x2="263" y2="193" stroke="#735766" stroke-width="1.6" marker-end="url(#arp)"/>
+  <line x1="517" y1="193" x2="532" y2="193" stroke="#735766" stroke-width="1.6" marker-end="url(#arp)"/>
+  <line x1="786" y1="193" x2="801" y2="193" stroke="#735766" stroke-width="1.6" marker-end="url(#arp)"/>
+  <line x1="1055" y1="193" x2="1070" y2="193" stroke="#735766" stroke-width="1.6" marker-end="url(#arp)"/>
+
+  <line x1="0" y1="364" x2="1320" y2="364" stroke="#D7CCD2"/>
+  <text x="0" y="392" font-size="15" fill="#6C4B60">Every slide keeps the article&#8217;s own sentences, so no tile ever carries a line the article never said. Photographs are cropped to fit their frames before they land.</text>
+  <text x="0" y="420" font-size="15" fill="#8C2F2F">Step 4 is the piece still to prove. Building the design and landing it in Canva works in testing. Running that step from a staff account has not been tried yet.</text>
+</svg>
+
+<div class="legend">
+  <span><i class="sw" style="background:#735766;border-color:#6C4B60"></i> you</span>
+  <span><i class="sw split"></i> together</span>
+  <span><i class="sw" style="background:#446074;border-color:#33505F"></i> your Claude session</span>
+</div>
+
+<h2>What you open</h2>
+<div class="mockrow">
+  <div class="mock">
+    <div class="mockhead">Slide one, waiting in Canva</div>
+    <div class="mockbody">
+      <div class="tile">
+        <div class="words">
+          <div class="chip">YOGA TODAY</div>
+          <div class="disp">Mental Health<br>Through the<br>Yogic Lens</div>
+          <div class="mark">Yoga Australia</div>
+        </div>
+        <div class="photo"><em>photograph, cropped</em></div>
+      </div>
+    </div>
+  </div>
+
+  <ul class="ready">
+    <li><b>Words in place, and they are the article&#8217;s own</b>
+      <span>Each slide carries a sentence lifted from the piece, with the paragraph it came from on record.</span></li>
+    <li><b>Photographs cropped to their frames</b>
+      <span>Chosen from the library and aimed so the subject survives a narrow panel, sized before it lands.</span></li>
+    <li><b>Caption written and checked</b>
+      <span>Ready to paste when the post goes out.</span></li>
+    <li><b>Every element is still live</b>
+      <span>Text boxes, pictures, colours. Nothing is a flat image and nothing is locked.</span></li>
+    <li><b>The layout you already use</b>
+      <span>Built from the team&#8217;s own exemplars and measured off the real exports, so it looks like a Yoga Australia post because it is one.</span></li>
+  </ul>
+</div>
+
+</div></body></html>
