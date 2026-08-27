@@ -1,21 +1,16 @@
 # Carousel playbook
 
-> **Under revision, 25 August 2026.** Step 6 below is wrong and is being replaced.
-> It ends by handing over a block of text to paste into Canva by hand, which is the
-> manual work this pipeline exists to remove. The correct ending is the session
-> building the design and landing it in Canva already populated and editable, as
-> `README.md` and `how-it-works.html` describe. Steps 1 to 5 stand.
+Instructions for a Claude session turning a published Yoga Australia article into a social carousel. The person you are working with supplies the article and makes every call. You mine it, draft the words, run the checks, then build the design in Canva and hand it over finished and editable.
 
-Instructions for a Claude session helping a Yoga Australia staff member turn a published article into a social carousel. The staff member supplies the article and makes the calls. You mine it, draft the words, and hand over a build sheet she pastes into Canva. Canva does the visual finish, so you never produce images or mock-ups.
+This repo is public. Everything in it is on the open internet. Member data, unpublished drafts, and font files stay out.
 
-This repo is public. Everything in it, and everything pushed to it, is on the open internet. Member data, unpublished drafts, and font files stay out.
+## Before you start
 
-## Inputs
+You need the **Canva connector** switched on in this account. Check it early, because step 6 depends on it. Without it you can still do steps 1 to 5. Say so at the start, never at the end.
 
-- The article, as a link to yogaaustralia.org.au or pasted text.
-- Her decisions along the way, which hooks, how many slides, which template.
+Ask questions one at a time, in plain text, each carrying your recommendation so a yes is enough. Keep them to the ones that change the build.
 
-Ask questions one at a time, in plain text, each with a recommendation so she can say yes or pick differently. Keep the questions to the ones that change the build.
+Write short. No preamble before the answer and no summary after it.
 
 ## Step 1. Hook mine
 
@@ -23,9 +18,9 @@ Read the article end to end. A hook is a passage that stands alone on a slide an
 
 Three kinds.
 
-- **Title hooks (T).** Phrases fit for the opening slide. Usually the article title, occasionally a shorter phrase that says its core.
-- **Content hooks (C).** Body passages each with a single idea, claim, or image. Number them C1, C2, ... in order of appearance.
-- **Closing hooks (X).** Passages fit for the last word, the argument's resolution or its most memorable line.
+- **Title hooks (T).** Fit for the opening slide. Usually the article title, occasionally a shorter phrase that says its core.
+- **Content hooks (C).** Body passages with a single idea, claim, or image. Number them C1, C2, ... in order of appearance.
+- **Closing hooks (X).** Fit for the last word, the argument's resolution or its most memorable line.
 
 Rate every candidate 1 to 3 on each of three tests.
 
@@ -35,21 +30,21 @@ Rate every candidate 1 to 3 on each of three tests.
 
 Note the source paragraph for every hook so each slide traces back to its passage.
 
-Mine roughly double what the carousel will use. A five-slide carousel wants eight to ten candidates, one T, several C, one or two X. Show her the full list with your recommended set marked, and let her choose.
+**Show ten candidates at most, and never more.** A long article holds hundreds of possible lines and a wall of them is useless. Pick the best ten, mark your recommended set, and say in one line which part of the article you are drawing from and why. If the article is long enough to carry several carousels, say that too and ask which one this is.
+
+Flag any hook whose meaning shifts when lifted. A past-tense habit that reads as a present claim, a fact still in progress that reads as settled, a name the slide would need and does not have.
 
 ## Step 2. Shape
 
-Settle three things with her, each with a recommendation.
+Settle three things, each with your recommendation.
 
 - **Slide count.** One opening slide, two to four content slides, one close. Fewer strong slides beat more thin ones.
-- **Template.** The Canva templates below. She finds them by name in Canva's search. For an article the default is the article carousel. The story variants suit a single-idea excerpt.
-- **Images.** For each slide with a photo frame, write one line naming subject, mood, and crop, for example "teacher working hands-on with a student, warm interior light, portrait crop". She picks the actual photographs from the team's Canva library. Never invent a photo requirement the template lacks.
-
-Templates in the team's Canva account.
+- **Template.** From the table below. The article carousel is the default for an article argument. The story variants suit a single-idea excerpt.
+- **Photographs.** Ask which pictures to use. She names them from the team's Canva library, or uploads them. For each photo frame, if she has no picture in mind, describe what the slide needs in one line, for example "teacher working hands-on with a student, warm interior light". Never invent a photo slot the template lacks.
 
 | Template | Use |
 |---|---|
-| YA article carousel | An article argument over 4+ slides, the default |
+| YA article carousel | An article argument over four slides, the default |
 | YA article story | One excerpt as a single story |
 | YA event carousel / YA event story | Event announcements |
 | YA CPD carousel / YA CPD story | CPD offerings |
@@ -60,9 +55,9 @@ Templates in the team's Canva account.
 
 For each slide, write the final text from its chosen hook.
 
-- **Verbatim first.** Lift the passage exactly. Trim only where length demands it, and confirm the claim survives the trim. Paraphrase as a last resort, and record which of the three each slide is.
+- **The article's own sentences first.** Lift the passage exactly. Trim only where length demands it, and confirm the claim survives the trim. Paraphrase as a last resort, and record which of the three each slide is.
 - Common Sanskrit terms in italics with full diacritics, *āsana*, *prāṇāyāma*, *dhyāna*, *samādhi*, *svādhyāya*. Proper nouns roman with diacritics, Krishnamacharya, Śaṅkarācārya.
-- Australian spelling. Plain, positive constructions.
+- Australian spelling. Plain, positive constructions. "program", never "programme".
 - Keep each slide inside its room. A heading of 3 to 8 words on the opener, 20 to 40 words on a content slide, 8 to 15 on the close.
 
 ## Step 4. Checks
@@ -70,25 +65,35 @@ For each slide, write the final text from its chosen hook.
 Run all four on the finished slide text. A fix in one re-runs the set.
 
 1. **Voice.** Australian spelling, diacritics correct, sentences plain and confident, no hedge stacks.
-2. **Tropes.** No see-saw contrasts, the shape that negates one thing to prop up another. No abstract tricolons ("Practice. Patience. Presence."). No marketing three-beat (hook, teaching, call to action). No em-dashes.
+2. **Tropes.** No see-saw contrasts, the shape that negates one thing to prop up another. No abstract tricolons ("Practice. Patience. Presence."). No marketing three-beat of hook, teaching and call to action. No em-dashes, no semicolons, no colons inside a sentence.
 3. **Fidelity.** Every slide traces to its named passage. A claim with no passage behind it is fabricated and comes off.
-4. **Risk.** No cure promises, no diagnosis, no clinical authority the article never claimed, no lineage put-downs. Check each image note against its slide text for a bad pairing.
+4. **Risk.** No cure promises, no diagnosis, no clinical authority the article never claimed, no lineage put-downs. Check each photograph against its slide text for a bad pairing.
 
 ## Step 5. Caption
 
 80 to 150 words. The opening sentence stands on its own, since Instagram truncates early. Name the topic and the author, give one or two sentences of context, close on a line that says something. Leave out slide-by-slide summaries, "swipe" language, and hashtags. Hashtags go in a first comment if wanted.
 
-## Step 6. Build sheet
+## Step 6. Build it in Canva
 
-Hand over one block she works from directly.
+Do not hand over a block of text for her to paste. Build the design.
 
-```
-Template:  YA article carousel  (search this name in Canva)
-Slide 1:   <exact text>
-           image: <one-line note>
-Slide 2:   <exact text>
-...
-Caption:   <caption text>
-```
+1. **Find the template.** Search Canva designs for the plain name from the table above, `YA article carousel` and so on. The live titles carry a TEST suffix while the set is still being cleared, and the search finds them either way. Confirm you have the right one by its page count.
+2. **Copy it.** Duplicate the template into a new design. Never edit the template, which every future carousel starts from.
+3. **Rename the copy** to the article and the date, so it is findable later.
+4. **Open an editing transaction on the copy** and read what is in it. You get the text elements with their current words and the image frames with their fills, each with its own element id. Those ids belong to this copy alone, so read them out of your own transaction.
+5. **Replace the text**, one element at a time, matching your slide text to the element that holds the equivalent placeholder. Slide one carries a short label and a display heading. Body slides carry one paragraph each.
+6. **Place the photographs** into the image frames. The frame crops the picture to fit, so look at the result and say plainly when a subject is cut badly. Leaving her to find it is the failure.
+7. **Commit the transaction.** Nothing is saved until you do.
+8. **Read the design back** and confirm every slide carries the words you intended.
 
-She duplicates the template in Canva, pastes each slide's text, drops in the photographs, and adjusts by eye. That finishing pass is hers, so resist the urge to specify sizes, positions, or colours. The template already knows.
+If the Canva connector is missing, stop here and say so plainly. Give her the words and the caption, tell her the template name, and say the build step needs the connector turned on. Do not pretend the pasting route is the design.
+
+## Step 7. Hand over
+
+Give her these three things in this order, and nothing else.
+
+- The link to the finished design.
+- The caption, ready to copy.
+- Anything you could not do, named plainly. A photo frame left empty, a heading that had to be trimmed, a crop worth checking.
+
+Every element in that design is live. Text, pictures, colours, nothing flattened and nothing locked. The last pass is hers, so resist specifying sizes, positions or colours. The template already knows them.

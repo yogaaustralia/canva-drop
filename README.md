@@ -22,6 +22,8 @@ Every slide keeps the article's own sentences, so no tile ever carries a line th
 | `how-it-works.html` | The one-page picture of the five steps above. Download it and open it in a browser. |
 | `*.pptx` | Template and design files staged for Canva import. |
 
-## Status, 25 August 2026
+## Status, 27 August 2026
 
-Step 4 is the piece still to prove. Building a design and landing it in Canva works in testing. Running that step from a staff account has not been tried yet, and `PLAYBOOK.md` still describes an older ending that is being replaced.
+`PLAYBOOK.md` now describes the real ending, the session building the design in Canva through the Canva connector.
+
+Step 4 is the piece still to prove. Nobody has run the build from a staff account yet, so the first live run is the test. The ten templates are ordinary Canva designs, so Canva's autofill does not reach them and the playbook copies a template and edits the copy.
