@@ -1,14 +1,14 @@
 # Carousel playbook
 
-Instructions for a Claude session turning a published Yoga Australia article into a social carousel. The person you are working with supplies the article and makes every call. You mine it, draft the words, run the checks, then build the design in Canva and hand it over finished and editable.
+Instructions for a Claude session turning a published Yoga Australia article into a social carousel. The person you are working with supplies the article and makes every call. You mine it, draft the words, run the checks, then build the design as an HTML file from the reference in this repo and hand it over.
 
 This repo is public. Everything in it is on the open internet. Member data, unpublished drafts, and font files stay out.
 
 ## Before you start
 
-You need the **Canva connector** switched on in this account, signed into the Yoga Australia team. Check it early, because step 6 depends on it. Without it you can still do steps 1 to 5. Say so at the start, never at the end.
+You need nothing switched on. The build is an HTML file you write from the reference in this repo and show as an artefact, so a plain chat session does the whole job.
 
-Ask questions one at a time, in plain text, each carrying your recommendation so a yes is enough. Keep them to the ones that change the build.
+Draft first, then ask. Your first reply carries the hook table with a recommended set marked, the slide text for that set, the photograph choices and the caption, then one question at most. She can take the lot with a yes or swap a line. Ask only what changes the build, one question at a time, each carrying your recommendation.
 
 Write short. No preamble before the answer and no summary after it. Australian spelling. No em-dashes and no semicolons. Never open a sentence or a bullet on a number or a counted noun ("Two things to note"), and never build a sentence as a see-saw ("X, not Y", "rather than"). Say the thing once.
 
@@ -40,7 +40,7 @@ Settle each of these, with your recommendation attached.
 
 - **Slide count.** One opening slide, two to four content slides, one close. Fewer strong slides beat more thin ones.
 - **Template.** From the table below. The article carousel is the default for an article argument. The story variants suit a single-idea excerpt.
-- **Photographs.** Take them in this order. The article's own photographs lead. The connector cannot fetch a picture from yogaaustralia.org.au (tested 2 September 2026, the fetch fails), so if the article's picture is wanted she drags it from the article page into Canva Uploads, and you place it from there. Then the team's library folders in Canva, `Yoga Images` and `Photos`, which you list and choose from by name and tags. Then anything she names or uploads herself. For each frame recommend one picture and say in a line why it fits the slide, then let her decide. Never invent a photo slot the template lacks.
+- **Photographs.** The article's own pictures lead, by URL. Then this repo's `photos/` folder once it exists. Then anything she uploads and links. One photograph per pair of slides. For each recommend one picture and say in a line why it fits, then let her decide. Never invent a photo slot the template lacks.
 
 | Template | Use |
 |---|---|
@@ -74,29 +74,22 @@ Run all four on the finished slide text. A fix in one re-runs the set.
 
 80 to 150 words. The opening sentence stands on its own, since Instagram truncates early. Name the topic and the author, give one or two sentences of context, close on a line that says something. Leave out slide-by-slide summaries, "swipe" language, and hashtags. Hashtags go in a first comment if wanted.
 
-## Step 6. Build it in Canva
+## Step 6. Build the HTML
 
-Do not hand over a block of text for her to paste. Build the design. This step was run end to end on 2 September 2026, a copy of the article carousel filled with five text slots and four photographs in one pass, every operation returning success, so the route below is proven.
+Do not hand over a block of text to paste, and do not build through the Canva connector. Build the design as an HTML file from the reference in this repo, look at it, and hand the file over.
 
-1. **Find the template.** Search Canva designs for the plain name from the table above, `YA article carousel` and so on. The live titles carry a TEST suffix while the set is still being cleared, and the search finds them either way. Confirm you have the right one by its page count.
-2. **Copy it.** Duplicate the template into a new design. Never edit the template, which every future carousel starts from.
-3. **Rename the copy** to the article and the date, so it is findable later.
-4. **Open an editing transaction on the copy** and read what is in it. You get the text elements with their current words and the image frames with their fills, each with its own element id. Those ids belong to this copy alone, so read them out of your own transaction.
-5. **Replace the text**, one element at a time, matching your slide text to the element that holds the equivalent placeholder. Slide one carries the series chip and a display heading of three short lines. The chip is a fixed white pill that reads YOGA TODAY on every article carousel. Leave it as it is. A longer label fills the pill edge to edge with no padding, which is the first thing a reader sees wrong. Body slides carry one paragraph each, and the speaker's name goes at the end of the same paragraph after a blank line.
-6. **Place the photographs** into the image frames. A library picture is placed by its asset id, which the folder listing gives you. Leave the logo frames alone, they hold the Yoga Australia mark on every slide. The frame crops the picture to fit, so look at the result and say plainly when a subject is cut badly. Leaving her to find it is the failure.
-7. **Commit the transaction.** Nothing is saved until you do.
-8. **Read the design back** and confirm every slide carries the words you intended.
-
-Pushing files into this repo, and importing a finished PowerPoint, are operator jobs described in `LANES.md`. A carousel session never needs them.
-
-If the Canva connector is missing, stop here and say so plainly. Give her the words and the caption, tell her the template name, and say the build step needs the connector turned on. Do not pretend the pasting route is the design.
+1. **Fetch the reference.** `https://raw.githubusercontent.com/yogaaustralia/canva-drop/main/article-carousel.html`. It carries the article carousel's geometry measured off the team's own Canva export, every box in its place, and the comment at its top says what each slot is. The geometry is settled. Fill the slots and change nothing else.
+2. **Words into slots.** The title lines into the `.display` heading, one passage into each `.para`. Five slides are laid out; delete the fifth if the deck is four. The chip stays YOGA TODAY and the lockup stays where it is.
+3. **Photographs by URL.** The article's own pictures first, by their `wp-content/uploads` address. Then this repo's `photos/` folder once it exists, then a picture she uploads and gives you the link to. One photograph serves each pair of slides: the same `src` and the same `--start` on the wide panel and the narrow strip that follows it, and the strip then shows exactly what lies to the right of the panel, so the swipe continues the picture. The seam falls 473 px into the picture. Choose `--start` so the seam cuts through floor, wall or mat and never through a face or a hand. For a portrait photograph `--start` runs from 0 to about 168.
+4. **Orphans.** One word alone on the last line of a paragraph is a defect. Hold the last two or three words together with `&nbsp;` and look again. Never trim the article's words to make a line fit.
+5. **Look at it.** Render the file as an artefact with `class="guides"` on `<body>` and read every slide at full size: the seam on each pair, every face whole, every paragraph inside its dashed box with a line of room to spare, the title inside its box, nothing touching an edge. Fix, look again, then remove the guides class. In a browser without Larken the fallback serif wraps a word or two differently from Canva, which is why the paragraph keeps a line of room.
 
 ## Step 7. Hand over
 
 Give her these three things in this order, and nothing else.
 
-- The link to the finished design.
+- The HTML file, complete, as a downloadable artefact named for the article and the date.
 - The caption, ready to copy.
-- Anything you could not do, named plainly. A photo frame left empty, a heading that had to be trimmed, a crop worth checking.
+- Anything you could not do, named plainly. A seam you could not clear, a passage that runs long, a photograph you could not reach.
 
-Every element in that design is live. Text, pictures, colours, nothing flattened and nothing locked. The last pass is hers, so resist specifying sizes, positions or colours. The template already knows them.
+The HTML is the design. It becomes an editable Canva design through the export lane in `LANES.md`: the file is converted to a PowerPoint at the same coordinates and imported into Canva from this repo, and every element arrives live. Until that lane runs on its own, the operator runs it. Say so in the hand-over and never say the design has reached Canva when it has not.

@@ -1,0 +1,104 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>YA article carousel — reference</title>
+<!--
+  Yoga Australia article carousel, the reference HTML.
+  Geometry measured off the team's own Canva export (Article Carousel_v1) on 20 August 2026,
+  pixel for pixel. Fill the slots, change nothing else. Every slide is 1080 x 1350.
+
+  The rules that keep it right:
+  - Slide 1 carries the chip, the title and a wide photograph on the right (473 px).
+  - Body slides alternate: even slides a narrow strip on the left (259 px) and the paragraph
+    centred in the remaining 821 px; odd slides the wide photograph on the right again and the
+    paragraph centred in the left 607 px.
+  - One photograph serves each PAIR of slides. Give both slides the same src and the same
+    --start. The narrow strip then shows exactly the part of the picture to the right of the
+    wide panel, so the swipe continues the image. Choose --start so that no face and no hand
+    sits at the seam, which is start + 473 px into the picture.
+  - --start is in pixels of the picture once scaled to 1350 px tall. For a 2:3 portrait
+    photograph that scaled width is about 900 px, so --start runs from 0 to about 168.
+    For a landscape photograph the scaled width is far larger and --start has more room.
+  - The lockup and the chip are fixed. The chip reads YOGA TODAY on every article carousel.
+  - The type is Larken in Canva. In a browser without Larken the fallback serif wraps a little
+    differently, so read the paragraph boxes with guides on and leave a line of room.
+  - Add class="guides" to <body> to see the text boxes while you work; remove it before handing over.
+-->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:#8A8A8A}
+  #deck{display:flex;flex-direction:column;gap:24px;width:1080px}
+  .slide{position:relative;width:1080px;height:1350px;background:#E1DCE0;overflow:hidden}
+
+  /* photographs */
+  .photo{position:absolute;top:0;height:1350px;object-fit:cover;
+         object-position:calc(-1px * var(--start,0)) 50%}
+  .photo.wide{right:0;width:473px}
+  .photo.narrow{left:0;width:259px;
+         object-position:calc(-1px * (var(--start,0) + 473)) 50%}
+
+  /* slide 1 furniture */
+  .chip{position:absolute;top:108px;left:162.5px;width:282px;height:62px;
+        background:#FFFFFF;border-radius:10px;
+        display:flex;align-items:center;justify-content:center;
+        font:400 34px/1 'Work Sans',Arial,sans-serif;letter-spacing:1px;color:#1A1A1A}
+  .display{position:absolute;left:68px;top:380px;width:471px;height:460px;
+        display:flex;flex-direction:column;justify-content:flex-end;
+        font:400 74px/1.39 'Larken Medium',Georgia,'Times New Roman',serif;color:#745766}
+
+  /* body paragraphs, centred in the words half, 80 px inside each side */
+  .para{position:absolute;top:275px;height:800px;
+        display:flex;flex-direction:column;justify-content:center;text-align:center;
+        font:400 48px/1.19 'Larken Regular',Georgia,'Times New Roman',serif;color:#745766}
+  .slide.odd  .para{left:80px;width:447px}
+  .slide.even .para{left:339px;width:661px}
+
+  /* the Yoga Australia lockup, centred on the words half */
+  .lockup{position:absolute;top:1197px;width:302px}
+  .slide.odd  .lockup{left:152.5px}
+  .slide.even .lockup{left:518.5px}
+
+  /* working guides, remove class="guides" from body before hand-over */
+  body.guides .display,body.guides .para{outline:2px dashed #C0392B}
+</style>
+<body>
+<div id="deck">
+
+  <!-- slide 1: title. Photograph A, wide. -->
+  <section class="slide odd">
+    <img class="photo wide" src="PHOTO_A_URL" style="--start:0">
+    <div class="chip">YOGA TODAY</div>
+    <h1 class="display">Title line one<br>Title line two</h1>
+    <img class="lockup" src="https://raw.githubusercontent.com/yogaaustralia/canva-drop/main/assets/ya-logo.png" alt="Yoga Australia">
+  </section>
+
+  <!-- slide 2: photograph A again, narrow, same --start -->
+  <section class="slide even">
+    <img class="photo narrow" src="PHOTO_A_URL" style="--start:0">
+    <p class="para">First passage from the article, lifted as it stands.</p>
+    <img class="lockup" src="https://raw.githubusercontent.com/yogaaustralia/canva-drop/main/assets/ya-logo.png" alt="Yoga Australia">
+  </section>
+
+  <!-- slide 3: photograph B, wide -->
+  <section class="slide odd">
+    <img class="photo wide" src="PHOTO_B_URL" style="--start:0">
+    <p class="para">Second passage.</p>
+    <img class="lockup" src="https://raw.githubusercontent.com/yogaaustralia/canva-drop/main/assets/ya-logo.png" alt="Yoga Australia">
+  </section>
+
+  <!-- slide 4: photograph B again, narrow, same --start -->
+  <section class="slide even">
+    <img class="photo narrow" src="PHOTO_B_URL" style="--start:0">
+    <p class="para">Third passage.</p>
+    <img class="lockup" src="https://raw.githubusercontent.com/yogaaustralia/canva-drop/main/assets/ya-logo.png" alt="Yoga Australia">
+  </section>
+
+  <!-- a fifth slide, if the article wants a close: photograph C, wide, odd. Delete if unused. -->
+  <section class="slide odd">
+    <img class="photo wide" src="PHOTO_C_URL" style="--start:0">
+    <p class="para">Closing line.</p>
+    <img class="lockup" src="https://raw.githubusercontent.com/yogaaustralia/canva-drop/main/assets/ya-logo.png" alt="Yoga Australia">
+  </section>
+
+</div>
+</body>
